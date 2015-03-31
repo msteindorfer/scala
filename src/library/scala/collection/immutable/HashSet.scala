@@ -41,6 +41,8 @@ class HashSet[A] extends AbstractSet[A]
 {
   import HashSet.{nullToEmpty, bufferSize, LeafHashSet}
 
+  override lazy val hashCode: Int = super.hashCode()
+
   override def companion: GenericCompanion[HashSet] = HashSet
 
   //class HashSet[A] extends Set[A] with SetLike[A, HashSet[A]] {

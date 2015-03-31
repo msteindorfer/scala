@@ -42,6 +42,8 @@ class HashMap[A, +B] extends AbstractMap[A, B]
 {
   import HashMap.{nullToEmpty, bufferSize}
 
+  override lazy val hashCode: Int = super.hashCode()
+
   override def size: Int = 0
 
   override def empty = HashMap.empty[A, B]
